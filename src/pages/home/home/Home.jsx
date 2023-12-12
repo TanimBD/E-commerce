@@ -1,5 +1,9 @@
 import React, { useContext } from 'react'
 import Layout from '../../../components/layout/Layout'
+import HeroSection from '../../../components/HeroSection/herosection'
+import Filter from '../../../components/filter/filter'
+import ProductCard from '../../../components/Productcard/productcard'
+import Testimonial from '../../../components/Testimonial/testimonial'
 import myContext from '../../../context/data/myContext'
 
 function Home() {
@@ -7,10 +11,11 @@ function Home() {
 
     const { } = context;
     return (
-        <Layout>
-            <h1>Name: { }</h1>
-            <h1>roll: { }</h1>
-            <h3>Game: { }</h3>
+        <Layout>sabbir
+            <HeroSection/>
+            <Filter/>
+             <ProductCard/>
+             <Testimonial/>
         </Layout>
     )
 }
