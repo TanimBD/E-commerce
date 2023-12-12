@@ -1,11 +1,15 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Layout from '../../../components/layout/Layout'
 import HeroSection from '../../../components/HeroSection/herosection'
 import Filter from '../../../components/filter/filter'
 import ProductCard from '../../../components/Productcard/productcard'
 import Testimonial from '../../../components/Testimonial/testimonial'
+import myContext from '../../../context/data/myContext'
 
 function Home() {
+    const context = useContext(myContext);
+
+    const { } = context;
     return (
         <Layout>sabbir
             <HeroSection/>
@@ -13,8 +17,6 @@ function Home() {
              <ProductCard/>
              <Testimonial/>
         </Layout>
-        
-
     )
 }
 
