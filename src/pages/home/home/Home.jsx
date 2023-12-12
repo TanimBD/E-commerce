@@ -3,6 +3,7 @@ import Layout from '../../../components/layout/Layout'
 import HeroSection from '../../../components/HeroSection/herosection'
 import Filter from '../../../components/filter/filter'
 import ProductCard from '../../../components/Productcard/productcard'
+import Testimonial from '../../../components/Testimonial/testimonial'
 
 function Home() {
     return (
@@ -10,6 +11,7 @@ function Home() {
             <HeroSection/>
             <Filter/>
              <ProductCard/>
+             <Testimonial/>
         </Layout>
         
 
