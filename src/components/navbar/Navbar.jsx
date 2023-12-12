@@ -13,11 +13,11 @@ function Navbar() {
     return (
         <div>
             <header className="relative bg-white">
-                <p className="flex h-10 items-center justify-center bg-blue-500 px-4 text-sm font-medium text-white sm:px-6 lg:px-8" style={{ backgroundColor: mode === 'dark' ? 'rgb(62 64 66)' : '', color: mode === 'dark' ? 'white' : '', }}>
+                <p className="flex h-10 items-center justify-center bg-blue-500 px-4 text-md font-medium text-white sm:px-6 lg:px-7 lg:py-8" style={{ backgroundColor: mode === 'dark' ? 'rgb(62 64 66)' : '', color: mode === 'dark' ? 'white' : '', }}>
                     Get free delivery on orders over 400/-
                 </p>
 
-                <nav aria-label="Top" className="bg-gray-100 px-4 sm:px-6 lg:px-8 shadow-xl " style={{ backgroundColor: mode === 'dark' ? '#282c34' : '', color: mode === 'dark' ? 'white' : '', }}>
+                <nav aria-label="Top" className="bg-gray-100 lg:py-4 px-4 sm:px-6 lg:px-8 shadow-xl " style={{ backgroundColor: mode === 'dark' ? '#282c34' : '', color: mode === 'dark' ? 'white' : '', }}>
                     <div className="">
                         <div className="flex h-16 items-center">
                             <button
