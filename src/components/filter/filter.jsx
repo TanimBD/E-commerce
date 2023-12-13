@@ -1,5 +1,6 @@
 import React, { useContext } from 'react'
 import myContext from '../../context/data/myContext'
+import '../../App.css'
 
 function Filter() {
     const context = useContext(myContext)
@@ -24,18 +25,18 @@ function Filter() {
                             name="searchkey"
                             id="searchkey"
                             placeholder="Search here"
-                            className="px-8 py-3 w-full rounded-md bg-violet-0 border-transparent outline-0 text-sm" style={{ backgroundColor: mode === 'dark' ? 'rgb(64 66 70)' : '', color: mode === 'dark' ? 'white' : '', }} />
+                            className="px-8 focus:border-sky-500 focus:ring-sky-500 focus:ring-2 py-3 w-full rounded-md bg-violet-0 border-transparent outline-0 text-sm" style={{ backgroundColor: mode === 'dark' ? 'rgb(64 66 70)' : '', color: mode === 'dark' ? 'white' : '', }} />
                     </div>
                     <div className="flex items-center justify-between mt-4">
                         <p className="font-medium">
                             Filters
                         </p>
-                        <button className="px-4 py-2 bg-gray-50hover:bg-gray-200 text-gray-800 text-sm font-medium rounded-md" style={{ color: mode === 'dark' ? 'white' : '' }}>
+                        <button className="px-4 py-2 link link-underline link-underline-black no-underline text-gray-800 text-sm font-medium rounded-md" style={{ color: mode === 'dark' ? 'white' : '' }}>
                             Reset Filter
                         </button>
                     </div>
                     <div>
-                        <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 mt-4">
+                        <div className="grid grid-cols-2  md:grid-cols-3 xl:grid-cols-4 gap-4 mt-4">
                             <select className="px-4 py-3 w-full rounded-md bg-gray-50 border-transparent outline-0 focus:border-gray-500 focus:bg-white focus:ring-0 text-sm" style={{ backgroundColor: mode === 'dark' ? 'rgb(64 66 70)' : '', color: mode === 'dark' ? 'white' : '', }}>
                                 <option value="jacket">Jacket</option>
                                 <option value="shirt">shirt</option>

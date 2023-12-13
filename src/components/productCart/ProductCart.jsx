@@ -25,7 +25,7 @@ function ProductCard() {
                                 <p className="leading-relaxed mb-3" style={{ color: mode === 'dark' ? 'white' : '' }}>200</p>
                                 <div className=" flex justify-center">
                                     <button type="button"
-                                        className="focus:outline-none text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm w-full  py-2">Add To Cart</button>
+                                        className="focus:outline-none text-white bg-blue-600 hover:bg-rose-600 duration-200 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm w-full  py-2">Add To Cart</button>
                                 </div>
                             </div>
 
@@ -42,7 +42,7 @@ function ProductCard() {
                                 <p className="leading-relaxed mb-3" style={{ color: mode === 'dark' ? 'white' : '' }}>200</p>
                                 <div className=" flex justify-center">
                                     <button type="button"
-                                        className="focus:outline-none text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm w-full  py-2">Add To Cart</button>
+                                        className="focus:outline-none text-white bg-blue-600 hover:bg-rose-600 duration-200  focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm w-full  py-2">Add To Cart</button>
                                 </div>
                             </div>
 
@@ -59,7 +59,7 @@ function ProductCard() {
                                 <p className="leading-relaxed mb-3" style={{ color: mode === 'dark' ? 'white' : '' }}>200</p>
                                 <div className=" flex justify-center">
                                     <button type="button"
-                                        className="focus:outline-none text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm w-full  py-2">Add To Cart</button>
+                                        className="focus:outline-none text-white bg-blue-600 hover:bg-rose-600 duration-200  focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm w-full  py-2">Add To Cart</button>
                                 </div>
                             </div>
 
@@ -76,7 +76,7 @@ function ProductCard() {
                                 <p className="leading-relaxed mb-3" style={{ color: mode === 'dark' ? 'white' : '' }}>200</p>
                                 <div className=" flex justify-center">
                                     <button type="button"
-                                        className="focus:outline-none text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm w-full  py-2">Add To Cart</button>
+                                        className="focus:outline-none text-white bg-blue-600 hover:bg-rose-600 duration-200 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm w-full  py-2">Add To Cart</button>
                                 </div>
                             </div>
 

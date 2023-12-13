@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import flag from '../../assets/Icon/bd_flag.png'
 import user from '../../assets/Icon/user.png'
 import { WiRaindrop } from "react-icons/wi";
+import "../../App.css"
 
 function Navbar() {
     const context = useContext(myContext);
@@ -42,19 +43,19 @@ function Navbar() {
                             </div>
 
                             <div className="ml-auto flex items-center">
-                                <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
+                                <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end ">
 
-                                    <Link to={'/allproducts'} className="text-md font-medium text-gray-700 " style={{ color: mode === 'dark' ? 'white' : '', }}>
+                                    <Link to={'/allproducts'} className="text-md  duration-200 hover:bg-rose-600  py-8 px-6 rounded hover:text-white font-medium text-gray-700 " style={{ color: mode === 'dark' ? 'white' : '', }}>
                                         All Products
                                     </Link>
-                                    <Link to={'/order'} className="text-md font-medium text-gray-700 " style={{ color: mode === 'dark' ? 'white' : '', }}>
+                                    <Link to={'/order'} className="text-md hover:bg-rose-600  p-8 rounded hover:text-white font-medium text-gray-700 " style={{ color: mode === 'dark' ? 'white' : '', }}>
                                         Order
                                     </Link>
-                                    <Link to={'/dashboard'} className="text-md font-medium text-gray-700 " style={{ color: mode === 'dark' ? 'white' : '', }}>
+                                    <Link to={'/dashboard'} className="text-md hover:bg-rose-600  p-8 rounded hover:text-white font-medium text-gray-700 " style={{ color: mode === 'dark' ? 'white' : '', }}>
                                         Admin
                                     </Link>
 
-                                    <a className="text-md font-medium text-gray-700 cursor-pointer  " style={{ color: mode === 'dark' ? 'white' : '', }}>
+                                    <a className="text-md hover:bg-rose-600  p-8 rounded hover:text-white font-medium text-gray-700 cursor-pointer  " style={{ color: mode === 'dark' ? 'white' : '', }}>
                                         Logout
                                     </a>
                                 </div>
@@ -66,7 +67,7 @@ function Navbar() {
                                             alt=""
                                             className="block h-auto w-5 flex-shrink-0"
                                         />
-                                        <span className="ml-3 block text-md font-medium" style={{ color: mode === 'dark' ? 'white' : '', }}>BD</span>
+                                        <span className="ml-3 block text-md  font-medium" style={{ color: mode === 'dark' ? 'white' : '', }}>BD</span>
                                     </a>
                                 </div>
                                 <div className="hidden lg:ml-8 lg:flex">
