@@ -35,7 +35,7 @@ function Cart() {
                     </div>
 
                     <div className="mt-6 h-full rounded-lg border bg-white p-6 shadow-md md:mt-0 md:w-1/3" style={{ backgroundColor: mode === 'dark' ? 'rgb(32 33 34)' : '', color: mode === 'dark' ? 'white' : '', }}>
-                        <p class="lg:text-3xl text-center pb-4 text-2xl font-black leading-9 text-gray-800 dark:text-white">Summary</p>
+                        <p style={{ color: mode === 'dark' ? 'white' : '', }} class="lg:text-3xl text-center pb-4 text-2xl font-black leading-9 text-gray-800 dark:text-white">Summary</p>
                         <div className="mb-2 flex justify-between">
                             <p className="text-gray-700" style={{ color: mode === 'dark' ? 'white' : '' }}>Subtotal</p>
                             <p className="text-gray-700" style={{ color: mode === 'dark' ? 'white' : '' }}>$100</p>
