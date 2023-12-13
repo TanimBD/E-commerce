@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import flag from '../../assets/Icon/bd_flag.png'
 import user from '../../assets/Icon/user.png'
 import { WiRaindrop } from "react-icons/wi";
+import "../../App.css"
 
 function Navbar() {
     const context = useContext(myContext);
@@ -13,11 +14,11 @@ function Navbar() {
     return (
         <div>
             <header className="relative bg-white">
-                <p className="flex h-10 items-center justify-center bg-blue-500 px-4 text-sm font-medium text-white sm:px-6 lg:px-8" style={{ backgroundColor: mode === 'dark' ? 'rgb(62 64 66)' : '', color: mode === 'dark' ? 'white' : '', }}>
+                <p className="flex h-10 items-center justify-center bg-blue-500 px-4 text-md font-medium text-white sm:px-6 lg:px-7 lg:py-8" style={{ backgroundColor: mode === 'dark' ? 'rgb(62 64 66)' : '', color: mode === 'dark' ? 'white' : '', }}>
                     Get free delivery on orders over 400/-
                 </p>
 
-                <nav aria-label="Top" className="bg-gray-100 px-4 sm:px-6 lg:px-8 shadow-xl " style={{ backgroundColor: mode === 'dark' ? '#282c34' : '', color: mode === 'dark' ? 'white' : '', }}>
+                <nav aria-label="Top" className="bg-gray-100 lg:py-4 px-4 sm:px-6 lg:px-8 shadow-xl " style={{ backgroundColor: mode === 'dark' ? '#282c34' : '', color: mode === 'dark' ? 'white' : '', }}>
                     <div className="">
                         <div className="flex h-16 items-center">
                             <button
@@ -42,19 +43,19 @@ function Navbar() {
                             </div>
 
                             <div className="ml-auto flex items-center">
-                                <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
+                                <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end ">
 
-                                    <Link to={'/allproducts'} className="text-md font-medium text-gray-700 " style={{ color: mode === 'dark' ? 'white' : '', }}>
+                                    <Link to={'/allproducts'} className="text-md  duration-200 hover:bg-rose-600  py-8 px-6 rounded hover:text-white font-medium text-gray-700 " style={{ color: mode === 'dark' ? 'white' : '', }}>
                                         All Products
                                     </Link>
-                                    <Link to={'/order'} className="text-md font-medium text-gray-700 " style={{ color: mode === 'dark' ? 'white' : '', }}>
+                                    <Link to={'/order'} className="text-md hover:bg-rose-600  p-8 rounded hover:text-white font-medium text-gray-700 " style={{ color: mode === 'dark' ? 'white' : '', }}>
                                         Order
                                     </Link>
-                                    <Link to={'/dashboard'} className="text-md font-medium text-gray-700 " style={{ color: mode === 'dark' ? 'white' : '', }}>
+                                    <Link to={'/dashboard'} className="text-md hover:bg-rose-600  p-8 rounded hover:text-white font-medium text-gray-700 " style={{ color: mode === 'dark' ? 'white' : '', }}>
                                         Admin
                                     </Link>
 
-                                    <a className="text-md font-medium text-gray-700 cursor-pointer  " style={{ color: mode === 'dark' ? 'white' : '', }}>
+                                    <a className="text-md hover:bg-rose-600  p-8 rounded hover:text-white font-medium text-gray-700 cursor-pointer  " style={{ color: mode === 'dark' ? 'white' : '', }}>
                                         Logout
                                     </a>
                                 </div>
@@ -66,7 +67,7 @@ function Navbar() {
                                             alt=""
                                             className="block h-auto w-5 flex-shrink-0"
                                         />
-                                        <span className="ml-3 block text-md font-medium" style={{ color: mode === 'dark' ? 'white' : '', }}>BD</span>
+                                        <span className="ml-3 block text-md  font-medium" style={{ color: mode === 'dark' ? 'white' : '', }}>BD</span>
                                     </a>
                                 </div>
                                 <div className="hidden lg:ml-8 lg:flex">
