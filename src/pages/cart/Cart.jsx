@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import myContext from '../../context/data/myContext';
 import Layout from '../../components/layout/Layout';
+import Modal from '../../components/modal/Modal';
 
 
 function Cart() {
@@ -51,12 +52,7 @@ function Cart() {
                             </div>
                         </div>
                         {/* <Modal  /> */}
-                        <button
-                            type="button"
-                            className="w-full  bg-indigo-600 py-2 text-center rounded-lg focus:outline-none duration-300  hover:bg-rose-600 text-white font-bold "
-                        >
-                            Buy Now
-                        </button>
+                        <Modal></Modal>
                     </div>
                 </div>
             </div>
