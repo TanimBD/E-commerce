@@ -1,5 +1,5 @@
 import { useContext, useState } from 'react';
-import { Link } from 'react-router-dom'
+import { Link, Navigate } from 'react-router-dom'
 import myContext from '../../context/data/myContext'
 import { toast } from 'react-toastify';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
@@ -37,6 +37,7 @@ function Signup() {
             setName("");
             setEmail("");
             setPassword("");
+            Navigate('/');
             setLoading(false)
 
         } catch (error) {

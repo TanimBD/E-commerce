@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import { BsFillCloudSunFill } from 'react-icons/bs'
 import { FiSun } from 'react-icons/fi'
 import myContext from '../../context/data/myContext';
@@ -11,6 +11,17 @@ import "../../App.css"
 function Navbar() {
     const context = useContext(myContext);
     const { mode, toggleMode } = context;
+
+    const [open, setOpen] = useState(false);
+
+
+    const user = JSON.parse(localStorage.getItem('user'))
+    // console.log(user.user.email)
+    const logout = () => {
+        localStorage.clear('user');
+        window.location.href = "/login";
+    }
+
     return (
         <div>
             <header className="relative bg-white">
@@ -51,11 +62,13 @@ function Navbar() {
                                     <Link to={'/order'} className="text-md hover:bg-rose-600  p-8 rounded hover:text-white font-medium text-gray-700 " style={{ color: mode === 'dark' ? 'white' : '', }}>
                                         Order
                                     </Link>
-                                    <Link to={'/dashboard'} className="text-md hover:bg-rose-600  p-8 rounded hover:text-white font-medium text-gray-700 " style={{ color: mode === 'dark' ? 'white' : '', }}>
-                                        Admin
-                                    </Link>
 
-                                    <a className="text-md hover:bg-rose-600  p-8 rounded hover:text-white font-medium text-gray-700 cursor-pointer  " style={{ color: mode === 'dark' ? 'white' : '', }}>
+                                    {user?.user?.email === 'sabbir123@gmail.com' ?
+                                        <Link to={'/dashboard'} className="text-md hover:bg-rose-600  p-8 rounded hover:text-white font-medium text-gray-700 " style={{ color: mode === 'dark' ? 'white' : '', }}>
+                                            Admin
+                                        </Link> : ''}
+
+                                    <a onClick={logout} className="text-md hover:bg-rose-600  p-8 rounded hover:text-white font-medium text-gray-700 cursor-pointer  " style={{ color: mode === 'dark' ? 'white' : '', }}>
                                         Logout
                                     </a>
                                 </div>
