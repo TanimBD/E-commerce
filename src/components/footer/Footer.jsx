@@ -11,7 +11,7 @@ export default function Footer() {
     return (
         <footer className="text-gray-600 body-font bg-gray-300" style={{ backgroundColor: mode === 'dark' ? 'rgb(46 49 55)' : '', color: mode === 'dark' ? 'white' : '', }}>
             <div className="container px-5 py-24 mx-auto" >
-                <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-y-10 lg:grid-cols-5">
+                <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-y-10 lg:grid-cols-5 order-first">
                     <div class="sm:col-span-2">
                         <h1 class="max-w-lg text-xl font-semibold tracking-tight text-gray-800 xl:text-2xl dark:text-white">Subscribe our newsletter to get an update.</h1>
 
