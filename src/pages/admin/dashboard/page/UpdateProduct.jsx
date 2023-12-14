@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import myContext from '../../../context/data/myContext';
 
+
 function UpdateProduct() {
     const context = useContext(myContext);
     const { products, setProducts, updateProduct } = context;
@@ -69,5 +70,6 @@ function UpdateProduct() {
         </div>
     )
 }
+
 
 export default UpdateProduct
