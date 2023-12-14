@@ -3,7 +3,7 @@ import React from 'react'
 function Nopage() {
     return (
         <div>
-            no one
+        there is nothing to show. invalid
         </div>
     )
 }
