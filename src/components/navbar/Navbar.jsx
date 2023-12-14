@@ -4,7 +4,7 @@ import { FiSun } from 'react-icons/fi'
 import { Dialog, Transition } from '@headlessui/react'
 import myContext from '../../context/data/myContext'
 import { RxCross2 } from 'react-icons/rx'
-import { Link } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
 import flag from '../../assets/Icon/bd_flag.png'
 import userPic from '../../assets/Icon/user.png'
 import { WiRaindrop } from "react-icons/wi";
@@ -68,17 +68,17 @@ function Navbar() {
                                 </div>
                                 <div className="space-y-6 border-t border-gray-200 px-4 py-6">
                                     <div className="flow-root ">
-                                        <Link to={'/allproducts'} className=" -m-2 duration-200 hover:bg-rose-600 block p-2 hover:text-white rounded font-medium text-gray-900 " style={{ color: mode === 'dark' ? 'white' : '', }}>
-                                            All Products
+                                        <Link to={'/'} className=" -m-2 duration-200 hover:bg-rose-600 block p-2 hover:text-white rounded font-medium text-gray-900 " style={{ color: mode === 'dark' ? 'white' : '', }}>
+                                            Home
                                         </Link>
                                     </div>
 
-                                    {user ? <div className="flow-root ">
-                                        <Link to={'/order'} style={{ color: mode === 'dark' ? 'white' : '', }} className="-m-2 duration-200 hover:bg-rose-600 hover:text-white rounded  block p-2 font-medium text-gray-900">
-                                            Order
+                                    <div className="flow-root ">
+                                        <Link to={'/contactus'} style={{ color: mode === 'dark' ? 'white' : '', }} className="-m-2 duration-200 hover:bg-rose-600 hover:text-white rounded  block p-2 font-medium text-gray-900">
+                                            Contact Us
                                         </Link>
-                                    </div> : ''
-                                    }
+                                    </div>
+
 
                                     {user?.user?.email === 'sabbir123@gmail.com' ?
                                         <div className="flow-root">
@@ -157,9 +157,10 @@ function Navbar() {
                             <div className="ml-auto flex items-center">
                                 <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end ">
 
-                                    <Link to={'/allproducts'} className="text-md  duration-200 hover:bg-rose-600  py-8 px-6 rounded hover:text-white font-medium text-gray-700 " style={{ color: mode === 'dark' ? 'white' : '', }}>
-                                        All Products
+                                    <Link to={'/'} className="text-md  duration-200 hover:bg-rose-600  py-8 px-6 rounded hover:text-white font-medium text-gray-700 " style={{ color: mode === 'dark' ? 'white' : '', }}>
+                                        Home
                                     </Link>
+
                                     <Link to={'/contactUs'} className="text-md hover:bg-rose-600  p-8 rounded hover:text-white font-medium text-gray-700 " style={{ color: mode === 'dark' ? 'white' : '', }}>
                                         Contact Us
                                     </Link>
