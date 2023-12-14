@@ -12,6 +12,7 @@ export default function Modal() {
         setIsOpen(true)
     }
 
+
     return (
         <>
             <div className=" text-center rounded-lg text-white font-bold">
@@ -76,7 +77,7 @@ export default function Modal() {
                                                         </div>
 
                                                     </form>
-                                                    <button onClick={closeModal} type="button" className="focus:outline-none w-full text-white bg-indigo-600 duration-300 hover:bg-rose-600  outline-0 font-medium rounded-lg text-sm px-5 py-2.5 ">Order Now</button>
+                                                    <button type="button" className="focus:outline-none w-full text-white bg-indigo-600 duration-300 hover:bg-rose-600  outline-0 font-medium rounded-lg text-sm px-5 py-2.5 ">Order Now</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -86,7 +87,7 @@ export default function Modal() {
                         </div>
                     </div>
                 </Dialog>
-            </Transition>
+            </Transition >
         </>
     )
 }
