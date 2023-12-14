@@ -6,6 +6,7 @@ import { auth } from '../../fireabase/FirebaseConfig';
 import { toast } from 'react-toastify';
 import Loader from '../../components/loader/Loader';
 
+
 function Login() {
     const context = useContext(myContext)
     const {loading, setLoading} = context;
@@ -79,5 +80,6 @@ function Login() {
         </div>
     )
 }
+
 
 export default Login
