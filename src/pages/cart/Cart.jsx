@@ -84,7 +84,7 @@ function Cart() {
                             </div>
                         </div>
                         {/* <Modal  /> */}
-                        <Modal></Modal>
+                        <Modal ></Modal>
                     </div>
                 </div>
             </div>

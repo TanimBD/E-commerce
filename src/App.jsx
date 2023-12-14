@@ -6,7 +6,6 @@ import {
   Navigate,
 } from "react-router-dom";
 import Home from './pages/home/home/Home';
-import Order from './pages/order/Order';
 import Cart from './pages/cart/Cart'
 import Dashboard from './pages/admin/dashboard/Dashboard'
 import Nopage from './pages/nopage/Nopage';
@@ -18,16 +17,17 @@ import AddProduct from './pages/admin/page/AddProduct';
 import UpdateProduct from './pages/admin/page/UpdateProduct';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import ContactUs from './pages/contact/ContactUs';
 function App() {
   return (
     <MyState>
       <Router>
         <Routes>
           <Route path='/' element={<Home></Home>}></Route>
-          <Route path='/order' element={<ProtectedRoutes>
-            <Order></Order>
+          <Route path='/contactus' element={<ContactUs></ContactUs>}></Route>
+          <Route path='/cart' element={<ProtectedRoutes>
+            <Cart></Cart>
           </ProtectedRoutes>}></Route>
-          <Route path='/cart' element={<Cart></Cart>}></Route>
           <Route path='/dashboard' element={<ProtectedRoutesForAdmin>
             <Dashboard></Dashboard>
           </ProtectedRoutesForAdmin>}></Route>
@@ -53,7 +53,8 @@ export default App
 
 //user.............
 export const ProtectedRoutes = ({ children }) => {
-  if (localStorage.getItem('currentUser')) {
+  const user = localStorage.getItem('user')
+  if (user) {
     return children
   }
   else {

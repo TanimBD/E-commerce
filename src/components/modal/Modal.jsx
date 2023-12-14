@@ -1,5 +1,6 @@
 import { Dialog, Transition } from '@headlessui/react'
-import { Fragment, useState } from 'react'
+import { Fragment, useContext, useState } from 'react'
+import myContext from '../../context/data/myContext'
 
 export default function Modal() {
     let [isOpen, setIsOpen] = useState(false)
@@ -11,7 +12,8 @@ export default function Modal() {
     function openModal() {
         setIsOpen(true)
     }
-
+    const context = useContext(myContext);
+    const { products, setProducts } = context;
 
     return (
         <>
@@ -77,7 +79,7 @@ export default function Modal() {
                                                         </div>
 
                                                     </form>
-                                                    <button type="button" className="focus:outline-none w-full text-white bg-indigo-600 duration-300 hover:bg-rose-600  outline-0 font-medium rounded-lg text-sm px-5 py-2.5 ">Order Now</button>
+                                                    <button onClick={closeModal} type="button" className="focus:outline-none w-full text-white bg-indigo-600 duration-300 hover:bg-rose-600  outline-0 font-medium rounded-lg text-sm px-5 py-2.5 ">Order Now</button>
                                                 </div>
                                             </div>
                                         </div>

@@ -94,13 +94,19 @@ function Navbar() {
                                             Logout
                                         </a>
                                     </div> : ''}
-                                    <div className="flow-root">
+                                    {user ? '' : <div className="flow-root">
+                                        <a onClick={logout} className="-m-2 block p-2 duration-200 hover:bg-rose-600 hover:text-white rounded font-medium text-gray-900 cursor-pointer" style={{ color: mode === 'dark' ? 'white' : '', }}>
+                                            Login
+                                        </a>
+                                    </div>}
+                                    {user ? <div className="flow-root">
                                         <Link to={'/'} className="-m-2 block p-2 font-medium text-gray-900 cursor-pointer">
                                             <img
                                                 className="inline-block w-10 h-10 rounded-full"
                                                 src={userPic} />
                                         </Link>
-                                    </div>
+                                    </div> : ''
+                                    }
                                 </div>
 
                                 <div className="border-t border-gray-200 px-4 py-6">
@@ -111,7 +117,7 @@ function Navbar() {
                                             className="block h-auto w-5 flex-shrink-0"
                                         />
                                         <span className="ml-3 flex items-center text-base font-medium text-gray-900" style={{ color: mode === 'dark' ? 'white' : '', }}><img className="block h-auto w-12 px-2 flex-shrink-0" src={flag}></img>BD</span>
-                                        <span className="sr-only">, change currency</span>
+
                                     </a>
                                 </div>
                             </Dialog.Panel>
@@ -154,9 +160,9 @@ function Navbar() {
                                     <Link to={'/allproducts'} className="text-md  duration-200 hover:bg-rose-600  py-8 px-6 rounded hover:text-white font-medium text-gray-700 " style={{ color: mode === 'dark' ? 'white' : '', }}>
                                         All Products
                                     </Link>
-                                    {user ? <Link to={'/order'} className="text-md hover:bg-rose-600  p-8 rounded hover:text-white font-medium text-gray-700 " style={{ color: mode === 'dark' ? 'white' : '', }}>
-                                        Order
-                                    </Link> : ''}
+                                    <Link to={'/contactUs'} className="text-md hover:bg-rose-600  p-8 rounded hover:text-white font-medium text-gray-700 " style={{ color: mode === 'dark' ? 'white' : '', }}>
+                                        Contact Us
+                                    </Link>
 
                                     {user?.user?.email === 'sabbir123@gmail.com' ?
                                         <Link to={'/dashboard'} className="text-md hover:bg-rose-600 rounded p-8  hover:text-white font-medium text-gray-700 " style={{ color: mode === 'dark' ? 'white' : '', }}>
@@ -166,6 +172,10 @@ function Navbar() {
                                     {user ? <a onClick={logout} className="text-md hover:bg-rose-600  p-8 rounded hover:text-white font-medium text-gray-700 cursor-pointer  " style={{ color: mode === 'dark' ? 'white' : '', }}>
                                         Logout
                                     </a> : ''}
+                                    {user ? '' : <a onClick={logout} className="text-md hover:bg-rose-600  p-8 rounded hover:text-white font-medium text-gray-700 cursor-pointer  " style={{ color: mode === 'dark' ? 'white' : '', }}>
+                                        Login
+                                    </a>
+                                    }
                                 </div>
 
                                 <div className="hidden lg:ml-8 lg:flex">
@@ -207,7 +217,6 @@ function Navbar() {
                                         </svg>
 
                                         <span className="ml-2 text-sm font-medium text-gray-800 group-" style={{ color: mode === 'dark' ? 'white' : '', }}>{cardItems.length}</span>
-                                        <span className="sr-only">items in cart, view bag</span>
                                     </Link>
                                 </div>
                             </div>

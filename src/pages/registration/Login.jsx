@@ -3,11 +3,29 @@ import { useContext, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom'
 import myContext from '../../context/data/myContext';
 import { toast } from 'react-toastify';
-import { auth } from '../../firebase/FirebaseConfig';
-import { signInWithEmailAndPassword } from 'firebase/auth';
+import { app, auth } from '../../firebase/FirebaseConfig';
+import { getAuth, signInWithEmailAndPassword, signInWithPopup } from 'firebase/auth';
 import Loader from '../../components/loader/Loader';
+import { FaSquareGooglePlus } from "react-icons/fa6";
+import { GoogleAuthProvider } from "firebase/auth";
 
 function Login() {
+
+    const provider = new GoogleAuthProvider();
+    const handleSignIn = () => {
+        signInWithPopup(auth, provider)
+            .then((result) => {
+                localStorage.setItem('user', JSON.stringify(result));
+                toast.success('Signin Successful')
+                navigate('/')
+            }).catch((error) => {
+                toast.error('Invalid Login!!')
+
+                const errorMessage = error.message;
+                console.log(errorMessage)
+                const email = error.customData.email;
+            });
+    }
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -37,6 +55,15 @@ function Login() {
                 <div className="">
                     <h1 className='text-center text-white text-2xl mb-4 font-bold'>Login</h1>
                 </div>
+
+                <div onClick={handleSignIn} className='flex items-center justify-center'>
+                    <button class="flex hover:bg-rose-600 font-bold items-center mb-2 justify-center transition ease-in-out delay-50 px-3 py-2.5 space-x-2 bg-blue-400 border border-slate-600 rounded-md  hover:text-white duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-600 focus:ring-opacity-50">
+                        <FaSquareGooglePlus size={30} className='text-white mx-3 hover:text-white' />
+                        Continue with Google
+                    </button>
+                </div>
+
+
                 <hr class="mt-6 border-b-1 border-blueGray-300" />
                 <div className="">
                     <h1 className='text-center text-white text-xl mb-4 font-bold mt-2'>Welcome!</h1>
