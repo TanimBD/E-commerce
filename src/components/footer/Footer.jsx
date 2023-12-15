@@ -17,7 +17,7 @@ export default function Footer() {
             <div className="container px-5 py-24 mx-auto" >
                 <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-y-10 lg:grid-cols-5 order-first">
                     <div class="sm:col-span-2">
-                        <h1 style={{ color: mode === 'dark' ? 'white' : '' }} class="max-w-lg text-xl font-semibold tracking-tight text-gray-800 xl:text-2xl dark:text-white">Subscribe our newsletter to get an update.</h1>
+                        <h1 style={{ color: mode === 'dark' ? 'white' : '' }} class="max-w-lg text-xl font-semibold tracking-tight text-gray-800 xl:text-2xl ">Subscribe our newsletter to get an update.</h1>
 
                         <div class="flex flex-col mx-auto mt-6 space-y-3 md:space-y-0 md:flex-row">
                             <input id="email" type="text" class="px-4 py-2 text-gray-700 bg-white border rounded-md dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-opacity-40 focus:ring-blue-300" placeholder="Email Address" />
